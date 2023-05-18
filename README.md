@@ -107,3 +107,36 @@ This tutorial outlines the implementation of on-premises Active Directory within
 9. Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is).
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/xDfi2PT.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+10. Restart and then log back into DC-1 as user: mydomain.com\labuser. Though in my case I just have to type labuser since I am on Linux Mint using a third party RDP software.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/zcnoImF.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+11. In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/JIVxqTy.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+12. Create a new OU named “_ADMINS”
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/dA6CqgJ.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/KsuC0xR.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”
+</p>
+<br />
