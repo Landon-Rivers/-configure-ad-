@@ -59,10 +59,19 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <br />
 
 <p>
+<img src="https://i.imgur.com/yEb5vK3.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/6KdZKMT.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+4. Ensure that both VMs are in the same Vnet.
+</p>
+<br />
+
+<p>
 <img src="https://i.imgur.com/X874OHd.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-4. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
+5. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
 </p>
 <br />
 
@@ -70,7 +79,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/Z3m4Sjp.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-5. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall
+6. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall
 </p>
 <br />
 
@@ -78,7 +87,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/Zrr5dL6.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-6. Check back at Client-1 to see the ping succeed
+7. Check back at Client-1 to see the ping succeed
 </p>
 <br />
 
