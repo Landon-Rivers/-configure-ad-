@@ -91,3 +91,19 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 <br />
 
+<p>
+<img src="https://i.imgur.com/5rrTKOO.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+8. Login to DC-1 and install Active Directory Domain Services.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/p64caNH.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/gezRyBb.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+9. Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is).
+</p>
+<br />
