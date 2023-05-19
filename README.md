@@ -140,3 +140,139 @@ This tutorial outlines the implementation of on-premises Active Directory within
 13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/u7EeM6F.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+14. Add jane_admin to the “Domain Admins” Security Group
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Jia3NyJ.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+15. Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”. 
+16. Use jane_admin as your admin account from now on fo DC-1.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/8sRTeXZ.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+17. From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/2NJcpwV.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+18. From the Azure Portal, restart Client-1.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/e2HjyPd.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/BMf5gfk.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+19. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/;8sRTeXZ.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+20. Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/;2NJcpwV.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+21. Create a new OU named “_CLIENTS” and drag Client-1 into there
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/H9Qn46M.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+22. Log into Client-1 as mydomain.com\jane_admin and open system properties.
+23. Click “Remote Desktop”
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/4PD2hT3.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+24. Allow “domain users” access to remote desktop
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/v3Uq8gx.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+25. You can now log into Client-1 as a normal, non-administrative user now.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/aJ7WEpC.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+26. Login to DC-1 as jane_admin
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/CnVShsu.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+27. Open PowerShell_ise as an administrator.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/CricgzsG.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cM7J7iB.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+28. Create a new File and paste the contents of the script into it (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/krfgwLy.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+29. Run the script and observe the accounts being created.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/tmBrshE.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+30. When finished, open ADUC and observe the accounts in the appropriate OU.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/IaO3moT.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/b0BslfF.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/rGJp9eM.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+31. Attempt to log into Client-1 with one of the accounts (take note of the password in the script).
+</p>
+<br />
+
+This concludes the implementation of on-premises Active Directory within Azure Virtual Machines.
