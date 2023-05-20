@@ -184,7 +184,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <br />
 
 <p>
-<img src="https://i.imgur.com/;8sRTeXZ.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/7Zn9SFq.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 20. Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
@@ -192,7 +192,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <br />
 
 <p>
-<img src="https://i.imgur.com/;2NJcpwV.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Iv3lNWw.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/FV7Agcl.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 21. Create a new OU named “_CLIENTS” and drag Client-1 into there
